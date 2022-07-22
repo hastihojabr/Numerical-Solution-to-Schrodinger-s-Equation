@@ -1,36 +1,13 @@
 # Numerical-Solution-to-Schrodinger-s-Equation
-\usepackage{mathtools}
+
 ### Part 2 - Time-dependent One-dimentional Schrodinger Equation Solver
 
-<img src="https://latex.codecogs.com/gif.latex?P(s | O_t )
-\begin{equation}
-    \Bar{H}\psi(x,t)=-\frac{\psi(x+\delta x)-2\psi(x,t)+\psi(x-\Delta x,t)}{\Delta x^2} +V(x)\psi(x,t)
-\end{equation}>
-We write the Hamiltonian in sparse matrix form for one dimension.
-\begin{equation}
-\Bar{H}=\frac{-\hbar^2}{2m\Delta x^2}
-    \begin{bmatrix}
-    -2 & 1 & 0 & 0 &  0 \\
-    1 & -2 & 1 & 0 &  0 \\
-    0 & 1 & -2 & 1 & 0  \\
-    0 & 0 & 1 & -2 & 1   \\
-    0 & 0 & 0 & 1 & -2   
-    \end{bmatrix}
-+
-    \begin{bmatrix}
-    V(x_0) & 0 & 0 & 0 &  0 \\
-    0 & V(x_1) & 0 & 0 &  0 \\
-    0 & 0 & V(x_2) & 0 & 0  \\
-    0 & 0 & 0 & V(x_3) & 0   \\
-    0 & 0 & 0 & 0 & V(x_4)   
-    \end{bmatrix}
-\end{equation}
+1. Choose an intial wave. THe common choice is a Gaussian multiplied by a plane wave.
 
-Equation 34 will be
-\begin{equation}
-    \left(I+\frac{i\Delta t}{2}\Bar{H}\right)\psi(x,t+\Delta t) = \left(I-\frac{i\Delta t} {2}\Bar{H}\right)\psi(x,t)
-\end{equation}
-
-\begin{equation}
-    \psi(m,n)=\psi(m\Delta x,n \Delta t)
-\end{equation}
+2. Normalize.
+3. Write Hamiltonian as a sparse matrix like Eq.33.
+4. Make linear algebra system given in Eq.34.
+5. Solve it using Tridiagonl matrix algorithm. We seperated the real and imagenery part and solve each part using numpy library \textit{np.linalg.solve}. 
+6. Be considerate of boundary conditions.
+7. You have calculated the wave function.
+8. Do a production run with 100 time steps and animate it.
