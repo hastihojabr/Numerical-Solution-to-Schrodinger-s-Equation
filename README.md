@@ -2,11 +2,10 @@
 \usepackage{mathtools}
 ### Part 2 - Time-dependent One-dimentional Schrodinger Equation Solver
 
-```math
+<img src="https://latex.codecogs.com/gif.latex?P(s | O_t )
 \begin{equation}
     \Bar{H}\psi(x,t)=-\frac{\psi(x+\delta x)-2\psi(x,t)+\psi(x-\Delta x,t)}{\Delta x^2} +V(x)\psi(x,t)
-\end{equation}
-```
+\end{equation}>
 We write the Hamiltonian in sparse matrix form for one dimension.
 \begin{equation}
 \Bar{H}=\frac{-\hbar^2}{2m\Delta x^2}
