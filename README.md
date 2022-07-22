@@ -1,5 +1,5 @@
 # Numerical-Solution-to-Schrodinger-s-Equation
-
+\usepackage{mathtools}
 ### Part 2 - Time-dependent One-dimentional Schrodinger Equation Solver
 
 
