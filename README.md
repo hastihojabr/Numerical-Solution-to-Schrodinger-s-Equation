@@ -2,7 +2,7 @@
 
 ### Part 2 - Time-dependent One-dimentional Schrodinger Equation Solver
 
-1. Choose an intial wave. THe common choice is a Gaussian multiplied by a plane wave.
+1. Choose an intial wave. The common choice is a Gaussian multiplied by a plane wave.
 2. Normalize.
 3. Write Hamiltonian as a sparse matrix like Eq.33.
 4. Make linear algebra system given in Eq.34.
