@@ -8,6 +8,14 @@ In this project we will look at Hamiltonian with several different potentials gi
 
 
 ### Part 1 - Time-independent One-dimentional Schrodinger Equation
+1. Take ψ0 = 0 and choose ψ1 any small number. We took 0.001 for ψ1 in our simulation. 
+2. Choose a trial energy En.
+3. Break ODE solver to 2 parts,right and left.Step ψl(x),which satisfies its boundary condition, in toward the right. Do this also for ψR. These to must reach the matching radius xmatch and satisfy this condition. In order to do so logarithmic derivative ψ′(x)/ψ(x) to be continuous.
+4. Normalize.
+5. Write a function that calculates the matching function ∆(E,x) as a function of energy and matching radius. This subroutine will be called by the bisection algorithm program to search for the energy at which ∆(E , x = 2) vanishes.
+6. Choose value of tolerance and search until ∆(E,x) changes in only fourth decimal place.
+7. Increase the value of the initial energy guess and search for excited states.
+
 ### Part 2 - Time-dependent One-dimentional Schrodinger Equation
 
 1. Choose an intial wave. The common choice is a Gaussian multiplied by a plane wave.
